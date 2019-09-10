@@ -8,12 +8,20 @@ using WestWindConsole.Entities;
 
 namespace WestWindConsole.DAL
 {
-    public class WestWindContext : DbContext
+    //My DbContext class is a "virtual" representation of the database
+    //WestWindContext inherits from the DBContext class
+    public class WestWindContext : DbContext //inheritance
     {
+        //My parameterless constructor will first call the constructor of the base class that takes
+        //a string value.
+        //DBContext(string connectionStringOrName)
         public WestWindContext() : base("name=WWdb")
         {
             // TODO: Demonstrate null database initializer
+            // We are telling eF to NOT generate a db or tables
             Database.SetInitializer<WestWindContext>(null);
+            // We can prevent database initiliation in code (like we are doing here), or we can prevent
+            // it through certain settings in the .config file.
         }
 
         public DbSet<Product> Products { get; set; }

@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 namespace WestWindConsole.Entities
 {
     // TODO: Begin reviewing entity attributes
-    [Table("Categories")]
+    // Identifies which database table this entity is supposed to represent (be "mapped" to).
+    [Table("Categories", Schema = "dbo")] // attribute. "decorate" classes, properties to give extra context
+    //default schema is dbo in sql server.  Schema is short for schematic.  It is the wrapper around the ERD.  A database can have multiple schema.  Its can be used similar to namespace.
+
     public class Category
     {
-        [Key]
+        [Key] // indicates that this property maps to the Primary Key in the Database
         public int CategoryID { get; set; }
 
         [Required] // Use this for string/varchar columns that are NOT NULL
