@@ -14,10 +14,11 @@ namespace WestWindConsole
         [Key]
         public int AddressID { get; set; }
 
-        [StringLength(60, ErrorMessage ="Address cannot be more than 60 characters in length")] //have to figure outname.... might be not mapped
-        public string Address { get; set; }
+        [Required, StringLength(60, ErrorMessage ="Address cannot be more than 60 characters in length")] 
+        [Column("Address")]//maps to the db column Address
+        public string StreetAddress { get; set; }
 
-        [StringLength(15, ErrorMessage = "City cannot be more than 15 characters in length")]
+        [Required, StringLength(15, ErrorMessage = "City cannot be more than 15 characters in length")]
         public string City { get; set; }
 
         [StringLength(15, ErrorMessage = "Region cannot be more than 15 characters in length")]
@@ -26,7 +27,7 @@ namespace WestWindConsole
         [StringLength(10, ErrorMessage = "Postal Code cannot be more than 10 characters in length")] //look up formating for this
         public string PostalCode { get; set; }
 
-        [StringLength(15, ErrorMessage = "Country cannot be more than 15 characters in length")]
+        [Required, StringLength(15, ErrorMessage = "Country cannot be more than 15 characters in length")]
         public string Country { get; set; }
     }
 }

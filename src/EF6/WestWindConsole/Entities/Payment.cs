@@ -13,13 +13,16 @@ namespace WestWindConsole.Entities
     {
         [Key]
         public int PaymentID { get; set; }
-
+        [Required]
         public DateTime PaymentDate { get; set; }
-
+        [Required]
         public double Amount { get; set; }
+        [Required]
         public int PaymentTypeID { get; set; } //double check FK
-        public int OrederID { get; set; }//FK
-        public int TransactionID { get; set; } //ERD has labled as uniqueidentifier
+        [Required]
+        public int OrderID { get; set; }
+        [Required]
+        public Guid TransactionID { get; set; } 
         public DateTime ClearedDate { get; set; }
     }
 }

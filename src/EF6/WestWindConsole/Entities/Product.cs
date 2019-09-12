@@ -17,18 +17,18 @@ namespace WestWindConsole.Entities
 
         [Required, StringLength(40, ErrorMessage = "Product Name cannot be longer than 40 characters")]
         public string ProductName { get; set; }
-
+        [Required]
         public int SupplierID { get; set; } //int? is shorthand to indicate nullable int value in the database
-
+        [Required]
         public int CategoryID { get; set; }
 
         [Required, StringLength(20, ErrorMessage = "Quantity per Unit is restricted to 20 characters in length")]
         public string QuantityPerUnit { get; set; }
 
-        [Range(0, double.MaxValue)]
+        [Required, Range(0, double.MaxValue)]
         public decimal UnitPrice { get; set; }
 
-        [Range(0, int.MaxValue)]
+        [Required, Range(0, int.MaxValue)]
         public int UnitsOnOrder { get; set; }
 
         public bool Discontinued { get; set; }

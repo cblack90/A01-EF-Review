@@ -15,9 +15,9 @@ namespace WestWindConsole.Entities
         [StringLength(20, ErrorMessage = "TerritoryID cannot be more than 20 characters in length")]
         public string TerritoryID { get; set; }
 
-        [StringLength(50, ErrorMessage = "Territory Description cannot be more than 50 characters in length")]
+        [Required, StringLength(50, ErrorMessage = "Territory Description cannot be more than 50 characters in length")]
         public string TerritoryDescription { get; set; }
-
+        [Required]
         public int RegionID { get; set; }
     }
 }

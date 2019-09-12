@@ -14,7 +14,7 @@ namespace WestWindConsole.Entities
         [Key]
         public int PaymentTypeID { get; set; }
 
-        [StringLength(40, ErrorMessage = "Payment Type Description cannot be more than 40 characters in length")]
+        [Required, StringLength(40, ErrorMessage = "Payment Type Description cannot be more than 40 characters in length")]
         public string PaymentTyupeDescription { get; set; }
     }
 }
