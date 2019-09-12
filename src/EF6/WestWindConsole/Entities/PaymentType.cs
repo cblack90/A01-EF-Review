@@ -16,5 +16,8 @@ namespace WestWindConsole.Entities
 
         [Required, StringLength(40, ErrorMessage = "Payment Type Description cannot be more than 40 characters in length")]
         public string PaymentTyupeDescription { get; set; }
+
+        public virtual ICollection<Payment> Paymentss { get; set; } =
+            new HashSet<Payment>();
     }
 }

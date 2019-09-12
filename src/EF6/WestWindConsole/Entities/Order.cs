@@ -28,5 +28,12 @@ namespace WestWindConsole.Entities
         public int? ShipAddressID { get; set; }
         [StringLength(250, ErrorMessage = "Comments cannot be more than 250 characters in length")]
         public string Comments { get; set; }
+
+        public virtual ICollection<Payment> Payments { get; set; } =
+            new HashSet<Payment>();
+        public virtual ICollection<Shipment> Shipments { get; set; } =
+            new HashSet<Shipment>();
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; } =
+            new HashSet<OrderDetail>();
     }
 }

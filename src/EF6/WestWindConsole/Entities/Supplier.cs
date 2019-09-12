@@ -15,5 +15,8 @@ namespace WestWindConsole.Entities
         public int AddressID { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; } =
+            new HashSet<Product>();
     }
 }

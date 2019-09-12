@@ -35,5 +35,10 @@ namespace WestWindConsole.Entities
 
         // TODO: Introducing Navigation Properties
         public virtual Category Category { get; set; }
+
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; } =
+            new HashSet<OrderDetail>();
+        public virtual ICollection<ManifestItem> ManifestItems { get; set; } =
+            new HashSet<ManifestItem>();
     }
 }

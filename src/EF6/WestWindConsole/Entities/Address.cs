@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using WestWindConsole.Entities;
 
 namespace WestWindConsole
 {
@@ -29,5 +30,13 @@ namespace WestWindConsole
 
         [Required, StringLength(15, ErrorMessage = "Country cannot be more than 15 characters in length")]
         public string Country { get; set; }
+        public virtual ICollection<Supplier> Suppliers { get; set; } =
+            new HashSet<Supplier>();
+
+        public virtual ICollection<Customer> Customers { get; set; } =
+            new HashSet<Customer>();
+
+        public virtual ICollection<Employee> Employees { get; set; } =
+            new HashSet<Employee>();
     }
 }
