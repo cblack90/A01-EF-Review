@@ -48,7 +48,31 @@ namespace WestWindConsole
                     case 8:
                         DisplayShippers();
                         break;
-                    // TODO: Practice - Display methods for remaining tables
+                    case 9:
+                        DisplayShippers();
+                        break;
+                    case 10:
+                        DisplayShippers();
+                        break;
+                    case 11:
+                        DisplayShippers();
+                        break;
+                    case 12:
+                        DisplayShippers();
+                        break;
+                    case 13:
+                        DisplayShippers();
+                        break;
+                    case 14:
+                        DisplayShippers();
+                        break;
+                    case 15:
+                        DisplayShippers();
+                        break;
+                    case 16:
+                        DisplayShippers();
+                        break;
+                        // TODO: Practice - Display methods for remaining tables
                 }
                 Pause();
             } while (menuChoice > 0 && menuChoice <= 15);
@@ -158,6 +182,14 @@ namespace WestWindConsole
             Console.WriteLine("6) Employee Territories");
             Console.WriteLine("7) Shipments");
             Console.WriteLine("8) Shippers");
+            Console.WriteLine("9) Addresses");
+            Console.WriteLine("10) Customers");
+            Console.WriteLine("11) Manifest Items");
+            Console.WriteLine("12) Orders");
+            Console.WriteLine("13) Payments");
+            Console.WriteLine("14) Payment Types");
+            Console.WriteLine("15) Regions");
+            Console.WriteLine("16) Territories");
             // TODO: Practice - Menu options for remaining tables
 
             Console.Write("Select a table (or 0 to exit): ");
