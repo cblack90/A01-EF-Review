@@ -49,28 +49,28 @@ namespace WestWindConsole
                         DisplayShippers();
                         break;
                     case 9:
-                        DisplayShippers();
+                        DisplayAddresses();
                         break;
                     case 10:
-                        DisplayShippers();
+                        DisplayCustomers();
                         break;
                     case 11:
-                        DisplayShippers();
+                        DisplayManifestItems();
                         break;
                     case 12:
-                        DisplayShippers();
+                        DisplayOrders();
                         break;
                     case 13:
-                        DisplayShippers();
+                        DisplayPayments();
                         break;
                     case 14:
-                        DisplayShippers();
+                        DisplayPaymentTypes();
                         break;
                     case 15:
-                        DisplayShippers();
+                        DisplayRegions();
                         break;
                     case 16:
-                        DisplayShippers();
+                        DisplayTerritories();
                         break;
                         // TODO: Practice - Display methods for remaining tables
                 }
@@ -171,6 +171,15 @@ namespace WestWindConsole
                 Console.WriteLine($"There are {count} products");
             }
         }
+        private void DisplayAddresses()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Addresses.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} products");
+            }
+        }
 
         private int ChooseTable()
         {
@@ -182,6 +191,7 @@ namespace WestWindConsole
             Console.WriteLine("6) Employee Territories");
             Console.WriteLine("7) Shipments");
             Console.WriteLine("8) Shippers");
+
             Console.WriteLine("9) Addresses");
             Console.WriteLine("10) Customers");
             Console.WriteLine("11) Manifest Items");
