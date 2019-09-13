@@ -177,7 +177,70 @@ namespace WestWindConsole
             {
                 int count = context.Addresses.Count();
                 // $ - String Interpolation
-                Console.WriteLine($"There are {count} products");
+                Console.WriteLine($"There are {count} addresses");
+            }
+        }
+        private void DisplayCustomers()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Customers.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} customers");
+            }
+        }
+        private void DisplayManifestItems()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.ManifestItems.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} manifest items");
+            }
+        }
+        private void DisplayOrders()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Orders.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} orders");
+            }
+        }
+        private void DisplayPayments()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Payments.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} payments");
+            }
+        }
+        private void DisplayPaymentTypes()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Products.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} payment types");
+            }
+        }
+        private void DisplayRegions()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Products.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} regions");
+            }
+        }
+        private void DisplayTerritories()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Products.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} p");
             }
         }
 
@@ -191,7 +254,6 @@ namespace WestWindConsole
             Console.WriteLine("6) Employee Territories");
             Console.WriteLine("7) Shipments");
             Console.WriteLine("8) Shippers");
-
             Console.WriteLine("9) Addresses");
             Console.WriteLine("10) Customers");
             Console.WriteLine("11) Manifest Items");
